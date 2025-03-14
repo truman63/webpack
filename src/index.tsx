@@ -1,6 +1,7 @@
 import {createRoot} from "react-dom/client";
 import App from "@/App";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
 
 
 const root = document.getElementById("root");
@@ -11,8 +12,12 @@ if (!root) {
 
 const conteiner = createRoot(root);
 
+import {setupStore} from "./store/store";
+
+const store = setupStore();
+
 conteiner.render(
-    <BrowserRouter>
+    <Provider store={store}>
         <App/>
-    </BrowserRouter>
+    </Provider>
 )
