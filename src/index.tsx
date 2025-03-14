@@ -7,6 +7,10 @@ const root = document.getElementById("root");
 const conteiner = createRoot(root);
 const store = setupStore();
 
+import {setupStore} from "./store/store";
+
+const store = setupStore();
+
 conteiner.render(
     <Provider store={store}>
         <App/>
