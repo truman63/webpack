@@ -5,9 +5,6 @@ import { Provider } from "react-redux";
 
 const root = document.getElementById("root");
 const conteiner = createRoot(root);
-const store = setupStore();
-
-import {setupStore} from "./store/store";
 
 const store = setupStore();
 
